@@ -1,6 +1,10 @@
 body{
     font-family: "ProximaNova";
     background-color: black;
+    background-color: $bg-color;
+    color: $color;
+    line-height: 1.3;
+
 }
 
 .fw-300{
