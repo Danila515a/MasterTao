@@ -4,21 +4,29 @@ const swiperBanner = new Swiper('.swiper-banner', {
 
     direction:'horizontal',
     loop: true,
+    spaceBetween: 24,
     
-
-
-    pagination: {
-    clickable: true,
-    el: '.swiper-pagination',
-    },
-
-
     navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
     },
     
-
-
+    pagination: {
+    clickable: true,
+    el: '.swiper-pagination',
+    },
     
 });
+const header = document.querySelector('header');
+const banner = document.querySelector('.swiper-banner')
+
+
+const bannerVariable = banner.getAttribute('style')
+const headerHeight = header.offsetHeight
+
+
+console.log(header.offsetHeight)
+console.log(bannerVariable)
+
+banner.setAttribute('style','--header-height:' + headerHeight + 'px')
+
